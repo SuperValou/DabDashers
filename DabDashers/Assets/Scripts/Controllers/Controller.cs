@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using Assets.Scripts;
@@ -8,7 +9,7 @@ using Debug = UnityEngine.Debug;
 public class Controller : MonoBehaviour
 {
     public Metronome Metronome;
-    public float forceScale = 10;
+    public float ForceScale = 1;
 
     private Rigidbody2D Rigidbody;
 
@@ -21,7 +22,7 @@ public class Controller : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            this.gameObject.transform.Translate(forceScale * Metronome.BeatScore, 0.1f, 0);
+            this.Rigidbody.AddForce(new Vector2((float)Math.Pow(Metronome.BeatScore, 2) * ForceScale, 0.1f));
         }
     }
 }

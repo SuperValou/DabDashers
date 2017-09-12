@@ -310,8 +310,8 @@ GameObject:
   - component: {fileID: 843527582}
   - component: {fileID: 843527585}
   - component: {fileID: 843527584}
-  - component: {fileID: 843527583}
   - component: {fileID: 843527586}
+  - component: {fileID: 843527583}
   m_Layer: 0
   m_Name: Player1
   m_TagString: Untagged
@@ -343,9 +343,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -0.05}
   serializedVersion: 2
-  m_Size: {x: 0.16, y: 0.16}
+  m_Size: {x: 0.75, y: 0.62}
 --- !u!50 &843527584
 Rigidbody2D:
   serializedVersion: 4
@@ -397,7 +397,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 21300000, guid: 8c86e6aa0ee2556458a1523125b62808, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

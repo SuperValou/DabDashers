@@ -8,7 +8,8 @@ namespace Assets.Scripts
         private float _frequency;
         
         public int BeatsPerMinute = 120;
-        public float Delay = -0.1f;
+        
+        public float PiPhase = 1;
 
         public AudioSource Source;
         
@@ -21,12 +22,13 @@ namespace Assets.Scripts
         
         void Update()
         {
-            BeatScore = (float) (1 - Math.Abs(Math.Cos(_frequency * Source.time + Delay)));
+            BeatScore = (float) (1 - Math.Abs(Math.Cos(Math.PI * _frequency * Source.time + PiPhase * Math.PI)));
             //Debug.Log(BeatScore);
 
             if (BeatScore > 0.8)
             {
                 this.gameObject.transform.localScale = 3 * BeatScore * Vector3.one;
+                Debug.Log(BeatScore);
             }
             else
             {
