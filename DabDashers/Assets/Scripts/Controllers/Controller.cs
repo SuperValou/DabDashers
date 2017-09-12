@@ -9,7 +9,9 @@ using Debug = UnityEngine.Debug;
 public class Controller : MonoBehaviour
 {
     public Metronome Metronome;
-    public float ForceScale = 1;
+    public float DashForce = 1;
+    public float JumpForce = 1;
+    public float DefaultUpForce = 0.1f;
 
     private Rigidbody2D Rigidbody;
 
@@ -18,11 +20,16 @@ public class Controller : MonoBehaviour
         this.Rigidbody = this.gameObject.GetComponent<Rigidbody2D>();
     }
 
+    private int lastBeat;
+
     void Update ()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) &&
+            Metronome.BeatNumber > lastBeat)
         {
-            this.Rigidbody.AddForce(new Vector2((float)Math.Pow(Metronome.BeatScore, 2) * ForceScale, 0.1f));
+            lastBeat = Metronome.BeatNumber;
+            this.Rigidbody.AddForce(new Vector2(Metronome.BeatScore * DashForce, DefaultUpForce));
+            //this.Rigidbody.AddForce(new Vector2(ForceScale, 0.1f));
         }
     }
 }
