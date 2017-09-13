@@ -37,7 +37,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1780170810305074}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -6.8544426, y: -2.680944, z: 0}
+  m_LocalPosition: {x: -7.564, y: -4.265, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -61,7 +61,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!61 &61587382649048978
 BoxCollider2D:
@@ -88,9 +88,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a1d16a2612ae2943b910301c0bd65f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlayerId: 1
+  PlayerId: 2
   Metronome: {fileID: 0}
-  DashForce: 1000
+  DashForce: 2000
   JumpForce: 2000
   DefaultUpForce: 100
   DefaultForwardForce: 100
@@ -125,7 +125,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 8c86e6aa0ee2556458a1523125b62808, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0456c07aef7e35648963db08504e6974, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
