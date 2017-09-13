@@ -1,17 +1,12 @@
 ﻿namespace Assets.Scripts
 {
-    public enum PlayerState
+    public enum DabState
     {
         Idle = 0,
         Dabbing,
         EndDabbing,
         Wallowing,
         JumpingUp,
-        JumpingDown,
-    }
-
-    public class StateMachine
-    {
-        
+        GoingDown,
     }
 }
