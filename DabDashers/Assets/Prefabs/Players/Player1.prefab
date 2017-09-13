@@ -20,9 +20,10 @@ GameObject:
   m_Component:
   - component: {fileID: 4337197894684706}
   - component: {fileID: 212177388021241872}
+  - component: {fileID: 95991413998536026}
+  - component: {fileID: 61587382649048978}
   - component: {fileID: 50341017817689014}
   - component: {fileID: 114170263698711002}
-  - component: {fileID: 61587382649048978}
   m_Layer: 0
   m_Name: Player1
   m_TagString: Untagged
@@ -37,7 +38,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1780170810305074}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -7.564, y: -4.265, z: 0}
+  m_LocalPosition: {x: -6.5644426, y: -3.2109437, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -57,12 +58,12 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 10
   m_AngularDrag: 0.05
-  m_GravityScale: 10
+  m_GravityScale: 8
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 1
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &61587382649048978
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -74,9 +75,26 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: 0, y: -0.05}
+  m_Offset: {x: -0.09, y: -0.05}
   serializedVersion: 2
-  m_Size: {x: 0.75, y: 0.62}
+  m_Size: {x: 0.64, y: 0.74}
+--- !u!95 &95991413998536026
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1780170810305074}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5011e91ad3eddc34997e4d8148483b23, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &114170263698711002
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -88,12 +106,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a1d16a2612ae2943b910301c0bd65f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlayerId: 2
+  PlayerId: 1
   Metronome: {fileID: 0}
-  DashForce: 2000
-  JumpForce: 2000
-  DefaultUpForce: 100
-  DefaultForwardForce: 100
+  DashForce: 30
+  JumpForce: 30
+  DefaultUpForce: 1
+  DefaultForwardForce: 15
 --- !u!212 &212177388021241872
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -125,7 +143,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 0456c07aef7e35648963db08504e6974, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8076639b709b8fd4e82c30dbf216c91a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

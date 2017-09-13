@@ -1,36 +1,21 @@
 ﻿using Assets.Scripts;
+using Boo.Lang.Runtime;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
     private int _lastBeat;
-    
+
     private Rigidbody2D _rigidbody;
-    private ConstantForce2D _forwardForce;
-    
+    private Animator _animator;
+
     public int PlayerId = 1;
     public Metronome Metronome;
-    public float DashForce = 1000;
-    public float JumpForce = 1000;
-    public float DefaultUpForce = 100;
-    public float DefaultForwardForce = 100;
-
-    private DabState _state;
-
-    public DabState State
-    {
-        private get { return _state; }
-        set
-        {
-            if (value != DabState.JumpingUp)
-            {
-                _forwardForce.force = Vector3.zero;
-            }
-
-            _state = value;
-        }
-    }
-
+    public float DashForce = 30;
+    public float JumpForce = 30;
+    public float DefaultUpForce = 1;
+    public float DefaultForwardForce = 15;
+    
     void Start()
     {
         this._rigidbody = this.gameObject.GetComponent<Rigidbody2D>();
@@ -38,61 +23,89 @@ public class PlayerController : MonoBehaviour
         {
             Debug.LogError("You don't have set up the metronome!");
         }
-
-        this._forwardForce = this.gameObject.GetComponent<ConstantForce2D>();
-        if (_forwardForce == null)
+        
+        this._animator = this.gameObject.GetComponent<Animator>();
+        if (_animator == null)
         {
-            Debug.LogError("You don't have set up the constant force!");
-        }
-        else
-        {
-            _forwardForce.force = Vector3.zero;
+            Debug.LogError("You don't have set up the animator!");
         }
     }
 
-
-    void Update ()
+    void Update()
     {
-        if (Input.GetButtonDown("Dash_player" + PlayerId) &&
-            Metronome.BeatNumber > _lastBeat &&
-            Metronome.BeatScore > 0)
+        this._animator.SetFloat("VelocityX", this._rigidbody.velocity.x);
+        this._animator.SetFloat("VelocityY", this._rigidbody.velocity.y);
+
+        if (_lastBeat == Metronome.BeatNumber)
         {
-            _lastBeat = Metronome.BeatNumber;
-            Dash();
-            return;
-        }
-        if (Input.GetButtonDown("Jump_player" + PlayerId) &&
-            Metronome.BeatNumber > _lastBeat &&
-            Metronome.BeatScore > 0)
-        {
-            _lastBeat = Metronome.BeatNumber;
-            Jump();
-            return;
-        }
-        if (this._rigidbody.velocity.y < 0)
-        {
-            this.State = DabState.GoingDown;
             return;
         }
 
-        if (this._rigidbody.velocity.magnitude < 0.01)
+        if (Input.GetButtonDown("Dash_player" + PlayerId))
         {
-            this.State = DabState.Idle;
+            if (_lastBeat < Metronome.BeatNumber && Metronome.BeatScore > 0)
+            {
+                Dash();
+                this._animator.SetBool("MisplacedInput", false);
+            }
+            else
+            {
+                Debug.Log("Misplaced input!");
+                this._animator.SetBool("Dashed", false);
+                this._animator.SetBool("MisplacedInput", true);
+            }
+
+            _lastBeat = Metronome.BeatNumber;
+            this._animator.SetBool("Jumped", false);
             return;
         }
+        
+        if (Input.GetButtonDown("Jump_player" + PlayerId))
+        {
+            if (_lastBeat < Metronome.BeatNumber && Metronome.BeatScore > 0)
+            {
+                Jump();
+                this._animator.SetBool("MisplacedInput", false);
+            }
+            else
+            {
+                Debug.Log("Misplaced input!");
+                this._animator.SetBool("Jumped", false);
+                this._animator.SetBool("MisplacedInput", true);
+            }
+
+            _lastBeat = Metronome.BeatNumber;
+            this._animator.SetBool("Dashed", false);
+            return;
+        }
+        
+        this._animator.SetBool("Dashed", false);
+        this._animator.SetBool("Jumped", false);
+        this._animator.SetBool("MisplacedInput", false);
     }
 
     private void Dash()
     {
+        Debug.Log("Dash!");
+        this._animator.SetBool("Dashed", true);
         this._rigidbody.AddForce(new Vector2(DashForce, DefaultUpForce), ForceMode2D.Impulse);
-        this.State = DabState.Dabbing;
     }
 
     private void Jump()
     {
-        this.State = DabState.JumpingUp;
-        _forwardForce.force = Vector3.right * DashForce;
+        Debug.Log("Jump!");
+        this._animator.SetBool("Jumped", true);
+        _rigidbody.AddForce(new Vector2(DefaultForwardForce, JumpForce), ForceMode2D.Impulse);
+        Invoke("TinyForwardInput", 0.2f);
+    }
 
-        this._rigidbody.AddForce(Vector2.up * JumpForce);
+    private void TinyForwardInput()
+    {
+        _rigidbody.AddForce(Vector2.right * DefaultForwardForce, ForceMode2D.Impulse);
+    }
+
+    private void Fail()
+    {
+        
     }
 }
