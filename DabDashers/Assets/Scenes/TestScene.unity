@@ -961,7 +961,8 @@ MonoBehaviour:
   YOffset: 0.5
   ForceScale: 20
   ClosestCameraZPosition: -8
-  CloseToEdgeLimit: 100
+  YEdgeLimit: 10
+  XEdgeLimit: 100
 --- !u!54 &1530395214
 Rigidbody:
   m_ObjectHideFlags: 0

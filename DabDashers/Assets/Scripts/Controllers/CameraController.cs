@@ -15,7 +15,8 @@ public class CameraController : MonoBehaviour
     public float YOffset = 2;
     public float ForceScale = 20;
     public float ClosestCameraZPosition = -8;
-    public float CloseToEdgeLimit = 10;
+    public float YEdgeLimit = 10;
+    public float XEdgeLimit = 10;
 
     void Start()
     {
@@ -42,24 +43,24 @@ public class CameraController : MonoBehaviour
 
 	void Update ()
     {
-        // center camera between players
+        // center camera between players vertically
         if (Players.Any(p =>
         {
             var screenPos = _camera.WorldToScreenPoint(p.transform.position);
-            return screenPos.x < CloseToEdgeLimit || screenPos.x > Screen.width - CloseToEdgeLimit
-                || screenPos.y < CloseToEdgeLimit || screenPos.y > Screen.height - CloseToEdgeLimit;
+            return screenPos.y < YEdgeLimit || screenPos.y > Screen.height - YEdgeLimit;
         }))
         {
-            float x = Players.Aggregate(0f, (sum, player) => sum + player.transform.position.x) / Players.Length;
             float y = Players.Aggregate(0f, (sum, player) => sum + player.transform.position.y) / Players.Length;
-            
-            float forceX = x - _camera.transform.position.x + XOffset;
             float forceY = y - _camera.transform.position.y + YOffset;
-
-            _rigidbody.AddForce(ForceScale * new Vector3(forceX, forceY, 0));
+            _rigidbody.AddForce(ForceScale * forceY * Vector3.up);
         }
 
-        // move camera forward or backward to adjust screen space
-        
+        // keep seeing best player
+	    if (Players.Any(p => _camera.WorldToScreenPoint(p.transform.position).x > Screen.width - XEdgeLimit))
+	    {
+            float x = Players.Max(p => p.transform.position.x);
+            float forceX = x - _camera.transform.position.x + XOffset;
+            _rigidbody.AddForce(ForceScale * forceX * Vector3.right);
+        }
     }
 }
