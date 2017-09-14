@@ -22,11 +22,20 @@ public class CameraController : MonoBehaviour
 	
 	public float KillPlayer = 1;
 
-    public Image VictoryImage;
+    public Image VictoryImage1;
+    public Image VictoryImage2;
 
     public float QuenelleSquaredThreshold = 1;
     public float QuenellePower = 10;
-    private bool PlayerGotQuenelle = false;
+    private bool _playerGotQuenelle = false;
+
+    public AudioSource FxAudioSource;
+    public AudioSource MusicAudioSource;
+    public AudioClip Player1Leader;
+    public AudioClip Player2Leader;
+
+    public AudioClip Victory1;
+    public AudioClip Victory2;
 
     void Start()
     {
@@ -49,10 +58,14 @@ public class CameraController : MonoBehaviour
             Debug.LogError("Players not set up!");
             this.enabled = false;
         }
+
+        MusicAudioSource.volume = 1;
     }
 
 	void Update ()
 	{
+        float bestX = Players.Max(p => p.transform.position.x);
+
         // center camera between players vertically
         if (Players.Any(p =>
         {
@@ -60,7 +73,7 @@ public class CameraController : MonoBehaviour
             return screenPos.y < YEdgeLimit || screenPos.y > Screen.height - YEdgeLimit;
         }))
         {
-            float y = Players.Max(p => p.transform.position.y);
+            float y = Players.First(p => p.transform.position.x == bestX).transform.position.y;
             float forceY = y - _camera.transform.position.y + YOffset;
             _rigidbody.AddForce(ForceScale * forceY * Vector3.up);
         }
@@ -68,18 +81,30 @@ public class CameraController : MonoBehaviour
         // keep seeing best player
         if (Players.Any(p => _camera.WorldToScreenPoint(p.transform.position).x > Screen.width - XEdgeLimit))
         {
-            float x = Players.Max(p => p.transform.position.x);
-            float forceX = x - _camera.transform.position.x + XOffset;
+            float forceX = bestX - _camera.transform.position.x + XOffset;
             _rigidbody.AddForce(ForceScale * forceX * Vector3.right);
         }
 
+        // end of game
         if (Players.Any(p =>
         {
             var screenPos = _camera.WorldToScreenPoint(p.transform.position);
             return screenPos.x < -KillPlayer;
         }))
         {
-            VictoryImage.gameObject.SetActive(true);
+            if (Players[0].transform.position.x < Players[1].transform.position.x)
+            {
+                VictoryImage2.gameObject.SetActive(true);
+                FxAudioSource.PlayOneShot(Victory2);
+            }
+            else
+            {
+                VictoryImage1.gameObject.SetActive(true);
+                FxAudioSource.PlayOneShot(Victory1);
+            }
+
+            MusicAudioSource.volume /= 10;
+
             foreach (var playerController in Players)
             {
                 playerController.enabled = false;
@@ -87,7 +112,7 @@ public class CameraController : MonoBehaviour
         }
 
         // quenelle
-        if (!PlayerGotQuenelle)
+        if (!_playerGotQuenelle)
 	    {
             for (int i = 0; i < Players.Length; i++)
             {
@@ -98,14 +123,16 @@ public class CameraController : MonoBehaviour
                         if (Players[i].transform.position.x < Players[j].transform.position.x)
                         {
                             Players[j].GetComponent<Rigidbody2D>().AddForce(Vector3.up * QuenellePower, ForceMode2D.Impulse);
+                            FxAudioSource.PlayOneShot(Player2Leader);
                         }
                         else
                         {
                             Players[i].GetComponent<Rigidbody2D>().AddForce(Vector3.up * QuenellePower, ForceMode2D.Impulse);
+                            FxAudioSource.PlayOneShot(Player1Leader);
                         }
 
                         Debug.Log("QUENELLE§");
-                        PlayerGotQuenelle = true;
+                        _playerGotQuenelle = true;
                         Invoke("UnQuenelle", 0.8f);
                     }
                 }
@@ -115,6 +142,6 @@ public class CameraController : MonoBehaviour
 
     private void UnQuenelle()
     {
-        PlayerGotQuenelle = false;
+        _playerGotQuenelle = false;
     }
 }

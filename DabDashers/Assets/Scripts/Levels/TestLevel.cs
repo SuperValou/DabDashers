@@ -32,22 +32,19 @@ public class TestLevel : MonoBehaviour
                 break;
 
             case 1:
-                break;
-
-            case 2:
                 Asset3.gameObject.SetActive(true);
                 break;
 
-            case 3:
+            case 2:
                 Asset3.gameObject.SetActive(false);
                 Asset2.gameObject.SetActive(true);
                 break;
-            case 4:
+            case 3:
                 Asset2.gameObject.SetActive(false);
                 Asset1.gameObject.SetActive(true);
                 break;
 
-            case 5:
+            case 4:
                 Asset1.gameObject.SetActive(false);
                 AssetGo.gameObject.SetActive(true);
 
