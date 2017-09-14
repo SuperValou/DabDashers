@@ -13,11 +13,16 @@ public class Go : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
     {
-	    if (Input.GetKeyDown(KeyCode.Return))
-	    {
-	        text.SetActive(false);
+	    if (Input.GetButtonDown("Restart"))
+        {
+            text.SetActive(false);
             loading.SetActive(true);
             SceneManager.LoadScene((int)SceneIndex.Level1);
         }
-	}
+
+        if (Input.GetButtonDown("Menu"))
+        {
+            Application.Quit();
+        }
+    }
 }
