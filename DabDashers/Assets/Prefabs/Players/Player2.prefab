@@ -38,7 +38,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1331624115560576}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -6.11, y: 2.6, z: 0}
+  m_LocalPosition: {x: -6.9644427, y: 2.899056, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -87,7 +87,7 @@ Animator:
   m_GameObject: {fileID: 1331624115560576}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 2b6d28c007db14b4e9e82786fc4b9680, type: 2}
+  m_Controller: {fileID: 9100000, guid: 5011e91ad3eddc34997e4d8148483b23, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -106,12 +106,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a1d16a2612ae2943b910301c0bd65f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlayerId: 1
+  PlayerId: 2
   Metronome: {fileID: 0}
   DashForce: 30
   JumpForce: 30
   DefaultUpForce: 1
   DefaultForwardForce: 7
+  AudioPlayer: {fileID: 0}
+  DashSound: {fileID: 8300000, guid: cfd16a476cea8ca4a8471b78dc4816a5, type: 3}
+  FailSound: {fileID: 8300000, guid: 2854ca7906b4a9743a53d0300eca34fd, type: 3}
+  JumpSound: {fileID: 8300000, guid: 4ab1cdb3238556846a7a5c946b93c50b, type: 3}
 --- !u!212 &212415041671816744
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -15,7 +15,12 @@ public class PlayerController : MonoBehaviour
     public float JumpForce = 30;
     public float DefaultUpForce = 1;
     public float DefaultForwardForce = 15;
-    
+
+    public AudioSource AudioPlayer;
+    public AudioClip DashSound;
+    public AudioClip FailSound;
+    public AudioClip JumpSound;
+
     void Start()
     {
         this._rigidbody = this.gameObject.GetComponent<Rigidbody2D>();
@@ -54,6 +59,7 @@ public class PlayerController : MonoBehaviour
                 this._animator.SetBool("Dashed", false);
                 this._animator.SetBool("MisplacedInput", true);
                 this._rigidbody.AddForce(new Vector2(DashForce / 3, DefaultUpForce), ForceMode2D.Impulse);
+                AudioPlayer.PlayOneShot(FailSound);
             }
 
             _lastBeat = Metronome.BeatNumber;
@@ -73,6 +79,7 @@ public class PlayerController : MonoBehaviour
                 Debug.Log("Misplaced input!");
                 this._animator.SetBool("Jumped", false);
                 this._animator.SetBool("MisplacedInput", true);
+                AudioPlayer.PlayOneShot(FailSound);
             }
 
             _lastBeat = Metronome.BeatNumber;
@@ -90,6 +97,8 @@ public class PlayerController : MonoBehaviour
         Debug.Log("Dash!");
         this._animator.SetBool("Dashed", true);
         this._rigidbody.AddForce(new Vector2(DashForce, DefaultUpForce), ForceMode2D.Impulse);
+
+        AudioPlayer.PlayOneShot(DashSound);
     }
 
     private void Jump()
@@ -98,6 +107,8 @@ public class PlayerController : MonoBehaviour
         this._animator.SetBool("Jumped", true);
         _rigidbody.AddForce(new Vector2(DefaultForwardForce, JumpForce), ForceMode2D.Impulse);
         Invoke("TinyForwardInput", 0.2f);
+
+        AudioPlayer.PlayOneShot(JumpSound);
     }
 
     private void TinyForwardInput()
