@@ -1,13 +1,13 @@
 fileFormatVersion: 2
-guid: 97cb08c9639b50749b9759858b574814
-timeCreated: 1505395297
+guid: da59f440b522f8f4cad8641fab08a0ce
+timeCreated: 1505397432
 licenseType: Pro
 TextureImporter:
   fileIDToRecycleName:
-    21300000: dash_fx_0
-    21300002: dash_fx_1
-    21300004: dash_fx_2
-    21300006: dash_fx_3
+    21300000: fx_green_0
+    21300002: fx_green_1
+    21300004: fx_green_2
+    21300006: fx_green_3
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -31,7 +31,7 @@ TextureImporter:
   textureFormat: 1
   maxTextureSize: 2048
   textureSettings:
-    filterMode: 0
+    filterMode: -1
     aniso: -1
     mipBias: -1
     wrapMode: 1
@@ -130,7 +130,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: dash_fx_0
+      name: fx_green_0
       rect:
         serializedVersion: 2
         x: 0
@@ -143,7 +143,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: dash_fx_1
+      name: fx_green_1
       rect:
         serializedVersion: 2
         x: 500
@@ -156,7 +156,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: dash_fx_2
+      name: fx_green_2
       rect:
         serializedVersion: 2
         x: 0
@@ -169,7 +169,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: dash_fx_3
+      name: fx_green_3
       rect:
         serializedVersion: 2
         x: 500
