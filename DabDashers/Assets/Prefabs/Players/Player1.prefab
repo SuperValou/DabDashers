@@ -111,7 +111,7 @@ MonoBehaviour:
   DashForce: 30
   JumpForce: 30
   DefaultUpForce: 1
-  DefaultForwardForce: 15
+  DefaultForwardForce: 7
 --- !u!212 &212177388021241872
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -53,6 +53,7 @@ public class PlayerController : MonoBehaviour
                 Debug.Log("Misplaced input!");
                 this._animator.SetBool("Dashed", false);
                 this._animator.SetBool("MisplacedInput", true);
+                this._rigidbody.AddForce(new Vector2(DashForce / 3, DefaultUpForce), ForceMode2D.Impulse);
             }
 
             _lastBeat = Metronome.BeatNumber;
@@ -102,10 +103,5 @@ public class PlayerController : MonoBehaviour
     private void TinyForwardInput()
     {
         _rigidbody.AddForce(Vector2.right * DefaultForwardForce, ForceMode2D.Impulse);
-    }
-
-    private void Fail()
-    {
-        
     }
 }

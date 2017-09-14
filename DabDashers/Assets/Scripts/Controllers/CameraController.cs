@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Assets.Scripts;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CameraController : MonoBehaviour
 {
@@ -17,6 +18,8 @@ public class CameraController : MonoBehaviour
     public float ClosestCameraZPosition = -8;
     public float YEdgeLimit = 10;
     public float XEdgeLimit = 10;
+
+    public Image VictoryImage;
 
     void Start()
     {
@@ -62,5 +65,18 @@ public class CameraController : MonoBehaviour
             float forceX = x - _camera.transform.position.x + XOffset;
             _rigidbody.AddForce(ForceScale * forceX * Vector3.right);
         }
+
+	    if (Players.Any(p =>
+	    {
+	        var screenPos = _camera.WorldToScreenPoint(p.transform.position);
+	        return screenPos.x < 0;
+	    }))
+	    {
+	        VictoryImage.gameObject.SetActive(true);
+	        foreach (var playerController in Players)
+	        {
+	            playerController.enabled = false;
+	        }
+	    }
     }
 }
