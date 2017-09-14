@@ -4,8 +4,6 @@ using UnityEngine.SceneManagement;
 
 public class VictoryScreen : MonoBehaviour
 {
-    public float aimedSize = 5;
-
     void Update()
     {
         if (Input.GetButtonDown("Restart"))
@@ -16,11 +14,6 @@ public class VictoryScreen : MonoBehaviour
         if (Input.GetButtonDown("Menu"))
         {
             SceneManager.LoadScene((int)SceneIndex.MainMenu);
-        }
-
-        if (this.transform.localScale.x < aimedSize)
-        {
-            this.transform.localScale *= 1.1f;
         }
     }
 }

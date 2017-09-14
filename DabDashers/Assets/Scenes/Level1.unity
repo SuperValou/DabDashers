@@ -1132,7 +1132,7 @@ Prefab:
   m_IsPrefabParent: 0
 --- !u!114 &340037356 stripped
 MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114384795942165112, guid: efff46b48210cda42afe5801d5468e1b,
+  m_PrefabParentObject: {fileID: 114659135461050046, guid: efff46b48210cda42afe5801d5468e1b,
     type: 2}
   m_PrefabInternal: {fileID: 340037355}
   m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
@@ -1363,6 +1363,12 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 340037355}
   m_Script: {fileID: 11500000, guid: 3c75d63a8481b31458887749f01afcc5, type: 3}
+--- !u!114 &507676305 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114040584904602162, guid: efff46b48210cda42afe5801d5468e1b,
+    type: 2}
+  m_PrefabInternal: {fileID: 340037355}
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!4 &531202717 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4196892578211186, guid: b2fd9ae315f162946890ea9883e34b0b,
@@ -2875,7 +2881,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioSource: {fileID: 983502275}
-  metronome: {fileID: 0}
+  metronome: {fileID: 498580714}
+  Asset3: {fileID: 507676305}
+  Asset2: {fileID: 1619255973}
+  Asset1: {fileID: 1131852119}
+  AssetGo: {fileID: 1954667973}
+  player1: {fileID: 348288067}
+  player2: {fileID: 1551788239}
 --- !u!4 &1021356097
 Transform:
   m_ObjectHideFlags: 0
@@ -3146,6 +3158,12 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4e99d2faf2735aa4f95347fc7c3975d4, type: 2}
   m_IsPrefabParent: 0
+--- !u!114 &1131852119 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114405670856628432, guid: efff46b48210cda42afe5801d5468e1b,
+    type: 2}
+  m_PrefabInternal: {fileID: 340037355}
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1 &1157108280
 GameObject:
   m_ObjectHideFlags: 0
@@ -4264,6 +4282,12 @@ Transform:
   m_PrefabParentObject: {fileID: 4132933229508424, guid: 4e99d2faf2735aa4f95347fc7c3975d4,
     type: 2}
   m_PrefabInternal: {fileID: 122641459}
+--- !u!114 &1619255973 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114380242715248700, guid: efff46b48210cda42afe5801d5468e1b,
+    type: 2}
+  m_PrefabInternal: {fileID: 340037355}
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1001 &1650980484
 Prefab:
   m_ObjectHideFlags: 0
@@ -4902,6 +4926,12 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0e25a26895352bf41a41bfeb128db2fd, type: 2}
   m_IsPrefabParent: 0
+--- !u!114 &1954667973 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114384795942165112, guid: efff46b48210cda42afe5801d5468e1b,
+    type: 2}
+  m_PrefabInternal: {fileID: 340037355}
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1001 &1983653913
 Prefab:
   m_ObjectHideFlags: 0
