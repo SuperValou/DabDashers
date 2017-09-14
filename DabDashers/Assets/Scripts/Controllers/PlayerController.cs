@@ -15,6 +15,7 @@ public class PlayerController : MonoBehaviour
     public float JumpForce = 30;
     public float DefaultUpForce = 1;
     public float DefaultForwardForce = 15;
+	public float MaxSpeed = 10;
 
     public AudioSource AudioPlayer;
     public AudioClip DashSound;
@@ -36,6 +37,14 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+	void FixedUpdate()
+	{
+		if (this._rigidbody.velocity.x > MaxSpeed)
+		{
+			this._rigidbody.velocity = new Vector2(MaxSpeed, _rigidbody.velocity.y);
+		}
+	}
+	
     void Update()
     {
         this._animator.SetFloat("VelocityX", this._rigidbody.velocity.x);
@@ -58,7 +67,7 @@ public class PlayerController : MonoBehaviour
                 Debug.Log("Misplaced input!");
                 this._animator.SetBool("Dashed", false);
                 this._animator.SetBool("MisplacedInput", true);
-                this._rigidbody.AddForce(new Vector2(DashForce / 3, DefaultUpForce), ForceMode2D.Impulse);
+                this._rigidbody.AddForce(new Vector2(DashForce / 2, DefaultUpForce), ForceMode2D.Impulse);
                 AudioPlayer.PlayOneShot(FailSound);
             }
 
@@ -79,6 +88,7 @@ public class PlayerController : MonoBehaviour
                 Debug.Log("Misplaced input!");
                 this._animator.SetBool("Jumped", false);
                 this._animator.SetBool("MisplacedInput", true);
+				this._rigidbody.AddForce(new Vector2(DashForce / 2, DefaultUpForce), ForceMode2D.Impulse);
                 AudioPlayer.PlayOneShot(FailSound);
             }
 

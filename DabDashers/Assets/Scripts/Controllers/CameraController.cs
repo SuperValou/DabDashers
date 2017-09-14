@@ -18,6 +18,8 @@ public class CameraController : MonoBehaviour
     public float ClosestCameraZPosition = -8;
     public float YEdgeLimit = 10;
     public float XEdgeLimit = 10;
+	
+	public float KillPlayer = 1;
 
     public Image VictoryImage;
 
@@ -53,7 +55,7 @@ public class CameraController : MonoBehaviour
             return screenPos.y < YEdgeLimit || screenPos.y > Screen.height - YEdgeLimit;
         }))
         {
-            float y = Players.Aggregate(0f, (sum, player) => sum + player.transform.position.y) / Players.Length;
+            float y = Players.Max(p => p.transform.position.y);
             float forceY = y - _camera.transform.position.y + YOffset;
             _rigidbody.AddForce(ForceScale * forceY * Vector3.up);
         }
@@ -69,7 +71,7 @@ public class CameraController : MonoBehaviour
 	    if (Players.Any(p =>
 	    {
 	        var screenPos = _camera.WorldToScreenPoint(p.transform.position);
-	        return screenPos.x < 0;
+	        return screenPos.x < -KillPlayer;
 	    }))
 	    {
 	        VictoryImage.gameObject.SetActive(true);
