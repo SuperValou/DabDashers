@@ -6,7 +6,7 @@ namespace Assets.Scripts
     public class Metronome : MonoBehaviour
     {
         private float _frequency;
-        private float _threshold = 0.8f;
+        public float Threshold = 0.8f;
 
         public int BeatsPerMinute = 120;
         
@@ -30,7 +30,7 @@ namespace Assets.Scripts
 
             // set the score value of an input that would happen now
             BeatScore = Mathf.Clamp01(
-                (float)Math.Abs(Math.Cos(Math.PI*_frequency*Source.time + PiPhase*Math.PI)) - _threshold // |cos(pi * 2 * x + 0.5 * pi)| - 0.8
+                (float)Math.Abs(Math.Cos(Math.PI*_frequency*Source.time + PiPhase*Math.PI)) - Threshold // |cos(pi * 2 * x + 0.5 * pi)| - 0.8
                 );
         }
     }
