@@ -117,6 +117,8 @@ MonoBehaviour:
   DashSound: {fileID: 8300000, guid: c0ae5e5fa68cbbe48be626f9791a460f, type: 3}
   FailSound: {fileID: 8300000, guid: d996b1d589254da47b58513b1652a4d9, type: 3}
   JumpSound: {fileID: 8300000, guid: bdf489efc9b4dab49a88fe836e572778, type: 3}
+  DashFx: {fileID: 1044788920656966, guid: e51f3cc28f65a33409458b46a7b5dba5, type: 2}
+  JumpFx: {fileID: 1599473121440784, guid: 94100acd00d8c6e4fb93cce2716262c6, type: 2}
 --- !u!212 &212177388021241872
 SpriteRenderer:
   m_ObjectHideFlags: 1
