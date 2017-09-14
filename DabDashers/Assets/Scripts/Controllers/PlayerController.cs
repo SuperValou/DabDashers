@@ -70,7 +70,7 @@ public class PlayerController : MonoBehaviour
                 this._animator.SetBool("Dashed", false);
                 this._animator.SetBool("MisplacedInput", true);
                 this._rigidbody.AddForce(new Vector2(DashForce / 2, DefaultUpForce), ForceMode2D.Impulse);
-                AudioPlayer.PlayOneShot(FailSound);
+                //AudioPlayer.PlayOneShot(FailSound);
             }
 
             _lastBeat = Metronome.BeatNumber;
@@ -91,7 +91,7 @@ public class PlayerController : MonoBehaviour
                 this._animator.SetBool("Jumped", false);
                 this._animator.SetBool("MisplacedInput", true);
 				this._rigidbody.AddForce(new Vector2(DashForce / 2, DefaultUpForce), ForceMode2D.Impulse);
-                AudioPlayer.PlayOneShot(FailSound);
+                //AudioPlayer.PlayOneShot(FailSound);
             }
 
             _lastBeat = Metronome.BeatNumber;
@@ -110,7 +110,7 @@ public class PlayerController : MonoBehaviour
         this._animator.SetBool("Dashed", true);
         this._rigidbody.AddForce(new Vector2(DashForce, DefaultUpForce), ForceMode2D.Impulse);
 
-        AudioPlayer.PlayOneShot(DashSound);
+        //AudioPlayer.PlayOneShot(DashSound);
 
         Instantiate(this.DashFx, this.transform.position, Quaternion.identity);
     }
@@ -122,7 +122,7 @@ public class PlayerController : MonoBehaviour
         _rigidbody.AddForce(new Vector2(DefaultForwardForce, JumpForce), ForceMode2D.Impulse);
         Invoke("TinyForwardInput", 0.2f);
 
-        AudioPlayer.PlayOneShot(JumpSound);
+        //AudioPlayer.PlayOneShot(JumpSound);
 
         Instantiate(this.DashFx, this.transform.position, Quaternion.Euler(new Vector3(0, 0, 90)));
     }
