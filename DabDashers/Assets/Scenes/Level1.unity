@@ -1298,7 +1298,7 @@ Transform:
   - {fileID: 1261452171}
   - {fileID: 1021356097}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &225769382
 Prefab:
@@ -6167,7 +6167,7 @@ Transform:
   - {fileID: 348288066}
   - {fileID: 1551788240}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1177645157
 Prefab:
@@ -7304,8 +7304,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 467113409}
-  - {fileID: 152935462}
-  - {fileID: 578216587}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -7402,7 +7400,7 @@ Transform:
   - {fileID: 1762364483}
   - {fileID: 1870898959}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1404234476
 Prefab:
@@ -7994,6 +7992,12 @@ Prefab:
       propertyPath: DashForce
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 212415041671816744, guid: 892d1d4c13fcaf44b88de5de07c2f07d,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 534558e2e93af884292b8d2a1bc9f833,
+        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 892d1d4c13fcaf44b88de5de07c2f07d, type: 2}
   m_IsPrefabParent: 0
@@ -9216,6 +9220,7 @@ Transform:
   - {fileID: 2087653439}
   - {fileID: 626619314}
   - {fileID: 1869549231}
+  - {fileID: 2126722885}
   - {fileID: 1037156407}
   - {fileID: 1566857431}
   - {fileID: 1484021864}
@@ -9224,7 +9229,6 @@ Transform:
   - {fileID: 249659018}
   - {fileID: 1087511576}
   - {fileID: 1791370868}
-  - {fileID: 2126722885}
   - {fileID: 416818116}
   - {fileID: 206614895}
   - {fileID: 1769861209}
@@ -9273,10 +9277,10 @@ Transform:
   - {fileID: 1259394457}
   - {fileID: 181689514}
   - {fileID: 1966535891}
-  - {fileID: 1118788136}
   - {fileID: 507982893}
   - {fileID: 1300572823}
   - {fileID: 42406180}
+  - {fileID: 1118788136}
   - {fileID: 1766701701}
   - {fileID: 1188339118}
   - {fileID: 1267242426}
