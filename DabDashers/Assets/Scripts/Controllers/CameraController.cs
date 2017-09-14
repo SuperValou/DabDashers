@@ -37,6 +37,8 @@ public class CameraController : MonoBehaviour
     public AudioClip Victory1;
     public AudioClip Victory2;
 
+    private bool SomebodyIsDead = false;
+
     void Start()
     {
         _camera = this.gameObject.GetComponent<Camera>();
@@ -86,6 +88,11 @@ public class CameraController : MonoBehaviour
         }
 
         // end of game
+	    if (SomebodyIsDead)
+	    {
+	        return;
+	    }
+
         if (Players.Any(p =>
         {
             var screenPos = _camera.WorldToScreenPoint(p.transform.position);
@@ -110,7 +117,7 @@ public class CameraController : MonoBehaviour
                 playerController.enabled = false;
             }
 
-            this.enabled = false;
+            SomebodyIsDead = true;
         }
 
         // quenelle
