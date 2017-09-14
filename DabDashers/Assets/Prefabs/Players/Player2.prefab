@@ -38,7 +38,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1331624115560576}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -6.9644427, y: 2.899056, z: 0}
+  m_LocalPosition: {x: -5.53, y: -4.45, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -56,9 +56,9 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 10
+  m_LinearDrag: 1
   m_AngularDrag: 0.05
-  m_GravityScale: 8
+  m_GravityScale: 3
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -87,7 +87,7 @@ Animator:
   m_GameObject: {fileID: 1331624115560576}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 5011e91ad3eddc34997e4d8148483b23, type: 2}
+  m_Controller: {fileID: 9100000, guid: 2b6d28c007db14b4e9e82786fc4b9680, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -108,10 +108,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PlayerId: 2
   Metronome: {fileID: 0}
-  DashForce: 30
-  JumpForce: 30
+  DashForce: 9
+  JumpForce: 14
   DefaultUpForce: 1
-  DefaultForwardForce: 7
+  DefaultForwardForce: 4
+  MaxSpeed: 10
   AudioPlayer: {fileID: 0}
   DashSound: {fileID: 8300000, guid: cfd16a476cea8ca4a8471b78dc4816a5, type: 3}
   FailSound: {fileID: 8300000, guid: 2854ca7906b4a9743a53d0300eca34fd, type: 3}
