@@ -115,4 +115,5 @@ public class PlayerController : MonoBehaviour
     {
         _rigidbody.AddForce(Vector2.right * DefaultForwardForce, ForceMode2D.Impulse);
     }
+    
 }

@@ -206,6 +206,15 @@ Prefab:
       propertyPath: JumpSound
       value: 
       objectReference: {fileID: 8300000, guid: 4ab1cdb3238556846a7a5c946b93c50b, type: 3}
+    - target: {fileID: 1331624115560576, guid: 892d1d4c13fcaf44b88de5de07c2f07d, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 95789765605693830, guid: 892d1d4c13fcaf44b88de5de07c2f07d,
+        type: 2}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 2b6d28c007db14b4e9e82786fc4b9680, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 892d1d4c13fcaf44b88de5de07c2f07d, type: 2}
   m_IsPrefabParent: 0
@@ -1112,6 +1121,10 @@ Prefab:
       propertyPath: JumpSound
       value: 
       objectReference: {fileID: 8300000, guid: bdf489efc9b4dab49a88fe836e572778, type: 3}
+    - target: {fileID: 1780170810305074, guid: bc7382cd2dc49b84996b18c5e7853a68, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bc7382cd2dc49b84996b18c5e7853a68, type: 2}
   m_IsPrefabParent: 0
