@@ -108,17 +108,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PlayerId: 2
   Metronome: {fileID: 0}
-  DashForce: 9
+  DashForce: 10
   JumpForce: 14
   DefaultUpForce: 1
   DefaultForwardForce: 4
-  MaxSpeed: 10
+  MaxSpeed: 20
   AudioPlayer: {fileID: 0}
   DashSound: {fileID: 8300000, guid: cfd16a476cea8ca4a8471b78dc4816a5, type: 3}
   FailSound: {fileID: 8300000, guid: 2854ca7906b4a9743a53d0300eca34fd, type: 3}
   JumpSound: {fileID: 8300000, guid: 4ab1cdb3238556846a7a5c946b93c50b, type: 3}
   DashFx: {fileID: 1044788920656966, guid: 448c8e584ef1f1444bac0d46e417267e, type: 2}
-  JumpFx: {fileID: 1599473121440784, guid: 94100acd00d8c6e4fb93cce2716262c6, type: 2}
 --- !u!212 &212415041671816744
 SpriteRenderer:
   m_ObjectHideFlags: 1
