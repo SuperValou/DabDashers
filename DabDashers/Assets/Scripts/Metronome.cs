@@ -32,8 +32,6 @@ namespace Assets.Scripts
             BeatScore = Mathf.Clamp01(
                 (float)Math.Abs(Math.Cos(Math.PI*_frequency*Source.time + PiPhase*Math.PI)) - _threshold // |cos(pi * 2 * x + 0.5 * pi)| - 0.8
                 );
-            
-            this.gameObject.transform.localScale = Vector3.one + Vector3.one * BeatScore;
         }
     }
 }
