@@ -1,0 +1,734 @@
+fileFormatVersion: 2
+guid: 73d01eb47309e004f9bf0efd0ea60b73
+timeCreated: 1505324242
+licenseType: Pro
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: title_anim_0
+    21300002: title_anim_1
+    21300004: title_anim_2
+    21300006: title_anim_3
+    21300008: title_anim_4
+    21300010: title_anim_5
+    21300012: title_anim_6
+    21300014: title_anim_7
+    21300016: title_anim_8
+    21300018: title_anim_9
+    21300020: title_anim_10
+    21300022: title_anim_11
+    21300024: title_anim_12
+    21300026: title_anim_13
+    21300028: title_anim_14
+    21300030: title_anim_15
+    21300032: title_anim_16
+    21300034: title_anim_17
+    21300036: title_anim_18
+    21300038: title_anim_19
+    21300040: title_anim_20
+    21300042: title_anim_21
+    21300044: title_anim_22
+    21300046: title_anim_23
+    21300048: title_anim_24
+    21300050: title_anim_25
+    21300052: title_anim_26
+    21300054: title_anim_27
+    21300056: title_anim_28
+    21300058: title_anim_29
+    21300060: title_anim_30
+    21300062: title_anim_31
+    21300064: title_anim_32
+    21300066: title_anim_33
+    21300068: title_anim_34
+    21300070: title_anim_35
+    21300072: title_anim_36
+    21300074: title_anim_37
+    21300076: title_anim_38
+    21300078: title_anim_39
+    21300080: title_anim_40
+    21300082: title_anim_41
+    21300084: title_anim_42
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: 0
+    aniso: -1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    textureFormat: 25
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 1
+  - buildTarget: iPhone
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: tvOS
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Android
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Tizen
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: WebGL
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Samsung TV
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: title_anim_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3851
+        width: 1233
+        height: 245
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: title_anim_1
+      rect:
+        serializedVersion: 2
+        x: 1233
+        y: 3851
+        width: 1233
+        height: 245
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: title_anim_2
+      rect:
+        serializedVersion: 2
+        x: 2466
+        y: 3851
+        width: 1233
+        height: 245
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: title_anim_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3606
+        width: 1233
+        height: 245
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: title_anim_4
+      rect:
+        serializedVersion: 2
+        x: 1233
+        y: 3606
+        width: 1233
+        height: 245
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: title_anim_5
+      rect:
+        serializedVersion: 2
+        x: 2466
+        y: 3606
+        width: 1233
+        height: 245
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: title_anim_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3361
+        width: 1233
+        height: 245
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: title_anim_7
+      rect:
+        serializedVersion: 2
+        x: 1233
+        y: 3361
+        width: 1233
+        height: 245
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: title_anim_8
+      rect:
+        serializedVersion: 2
+        x: 2466
+        y: 3361
+        width: 1233
+        height: 245
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: title_anim_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3116
+        width: 1233
+        height: 245
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: title_anim_10
+      rect:
+        serializedVersion: 2
+        x: 1233
+        y: 3116
+        width: 1233
+        height: 245
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: title_anim_11
+      rect:
+        serializedVersion: 2
+        x: 2466
+        y: 3116
+        width: 1233
+        height: 245
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: title_anim_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2871
+        width: 1233
+        height: 245
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: title_anim_13
+      rect:
+        serializedVersion: 2
+        x: 1233
+        y: 2871
+        width: 1233
+        height: 245
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: title_anim_14
+      rect:
+        serializedVersion: 2
+        x: 2466
+        y: 2871
+        width: 1233
+        height: 245
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: title_anim_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2626
+        width: 1233
+        height: 245
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: title_anim_16
+      rect:
+        serializedVersion: 2
+        x: 1233
+        y: 2626
+        width: 1233
+        height: 245
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: title_anim_17
+      rect:
+        serializedVersion: 2
+        x: 2466
+        y: 2626
+        width: 1233
+        height: 245
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: title_anim_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2381
+        width: 1233
+        height: 245
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: title_anim_19
+      rect:
+        serializedVersion: 2
+        x: 1233
+        y: 2381
+        width: 1233
+        height: 245
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: title_anim_20
+      rect:
+        serializedVersion: 2
+        x: 2466
+        y: 2381
+        width: 1233
+        height: 245
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: title_anim_21
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2136
+        width: 1233
+        height: 245
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: title_anim_22
+      rect:
+        serializedVersion: 2
+        x: 1233
+        y: 2136
+        width: 1233
+        height: 245
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: title_anim_23
+      rect:
+        serializedVersion: 2
+        x: 2466
+        y: 2136
+        width: 1233
+        height: 245
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: title_anim_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1891
+        width: 1233
+        height: 245
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: title_anim_25
+      rect:
+        serializedVersion: 2
+        x: 1233
+        y: 1891
+        width: 1233
+        height: 245
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: title_anim_26
+      rect:
+        serializedVersion: 2
+        x: 2466
+        y: 1891
+        width: 1233
+        height: 245
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: title_anim_27
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1646
+        width: 1233
+        height: 245
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: title_anim_28
+      rect:
+        serializedVersion: 2
+        x: 1233
+        y: 1646
+        width: 1233
+        height: 245
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: title_anim_29
+      rect:
+        serializedVersion: 2
+        x: 2466
+        y: 1646
+        width: 1233
+        height: 245
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: title_anim_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1401
+        width: 1233
+        height: 245
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: title_anim_31
+      rect:
+        serializedVersion: 2
+        x: 1233
+        y: 1401
+        width: 1233
+        height: 245
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: title_anim_32
+      rect:
+        serializedVersion: 2
+        x: 2466
+        y: 1401
+        width: 1233
+        height: 245
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: title_anim_33
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1156
+        width: 1233
+        height: 245
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: title_anim_34
+      rect:
+        serializedVersion: 2
+        x: 2466
+        y: 1156
+        width: 1233
+        height: 245
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: title_anim_35
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 911
+        width: 1233
+        height: 245
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: title_anim_36
+      rect:
+        serializedVersion: 2
+        x: 2466
+        y: 911
+        width: 1233
+        height: 245
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: title_anim_37
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 666
+        width: 1233
+        height: 245
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: title_anim_38
+      rect:
+        serializedVersion: 2
+        x: 2466
+        y: 666
+        width: 1233
+        height: 245
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: title_anim_39
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 421
+        width: 1233
+        height: 245
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: title_anim_40
+      rect:
+        serializedVersion: 2
+        x: 2466
+        y: 421
+        width: 1233
+        height: 245
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: title_anim_41
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 176
+        width: 1233
+        height: 245
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: title_anim_42
+      rect:
+        serializedVersion: 2
+        x: 2466
+        y: 176
+        width: 1233
+        height: 245
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
