@@ -75,7 +75,7 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: -0.09, y: -0.05}
+  m_Offset: {x: -0.09, y: -0.04}
   serializedVersion: 2
   m_Size: {x: 0.64, y: 0.74}
 --- !u!95 &95991413998536026
@@ -87,7 +87,7 @@ Animator:
   m_GameObject: {fileID: 1780170810305074}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 5011e91ad3eddc34997e4d8148483b23, type: 2}
+  m_Controller: {fileID: 9100000, guid: 2b6d28c007db14b4e9e82786fc4b9680, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -112,6 +112,10 @@ MonoBehaviour:
   JumpForce: 30
   DefaultUpForce: 1
   DefaultForwardForce: 7
+  AudioPlayer: {fileID: 0}
+  DashSound: {fileID: 8300000, guid: c0ae5e5fa68cbbe48be626f9791a460f, type: 3}
+  FailSound: {fileID: 8300000, guid: d996b1d589254da47b58513b1652a4d9, type: 3}
+  JumpSound: {fileID: 8300000, guid: bdf489efc9b4dab49a88fe836e572778, type: 3}
 --- !u!212 &212177388021241872
 SpriteRenderer:
   m_ObjectHideFlags: 1
