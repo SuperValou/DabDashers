@@ -109,6 +109,8 @@ public class CameraController : MonoBehaviour
             {
                 playerController.enabled = false;
             }
+
+            this.enabled = false;
         }
 
         // quenelle
