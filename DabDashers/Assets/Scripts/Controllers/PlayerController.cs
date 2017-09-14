@@ -23,8 +23,7 @@ public class PlayerController : MonoBehaviour
     public AudioClip JumpSound;
 
     public GameObject DashFx;
-    public GameObject JumpFx;
-
+    
     void Start()
     {
         this._rigidbody = this.gameObject.GetComponent<Rigidbody2D>();
@@ -125,13 +124,11 @@ public class PlayerController : MonoBehaviour
 
         AudioPlayer.PlayOneShot(JumpSound);
 
-        Instantiate(this.JumpFx, this.transform.position, Quaternion.identity);
+        Instantiate(this.DashFx, this.transform.position, Quaternion.Euler(new Vector3(0, 0, 90)));
     }
 
     private void TinyForwardInput()
     {
         _rigidbody.AddForce(Vector2.right * DefaultForwardForce, ForceMode2D.Impulse);
     }
-    
-    
 }
